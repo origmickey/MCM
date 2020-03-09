@@ -12,13 +12,15 @@
 \newcommand{\Problem}{B}
 \newcommand{\Team}{2012188}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\usepackage{indentfirst}
 \usepackage{newtxtext}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{newtxmath} % must come after amsXXX
 
 %\usepackage[pdftex]{graphicx}
 \usepackage{graphicx}
+
+\usepackage{float}
 
 \usepackage{xcolor}
 \usepackage{fancyhdr}
@@ -54,13 +56,13 @@
 
 Wherever there are recreational sandy ocean beaches in the world, there seem to be children (and adults) creating sandcastles on the seashore.So it will be very meaningful and interesting to study strategies to make sandcastles live longer.
 
-\textbf{First},generally, the impact of a single wave on a sand castle is not so strong, so we believe that after each impact on a sand castle, only a portion of the sand at the bottom of the sand castle will be taken away. This will cause a portion of the sand castle above the reduced sand to be suspended.Over time, if the gravity of this part of the sand castle is greater than the attraction from the whole sand castle, then we think that the sand castle has collapsed at this time.In order to determine the relationship between the gravity of the suspended sand castle and the attraction it receives over time and the time required for the gravity of the suspended parts of the sand castle of several basic shapes to exceed the attraction, we establish \textbf{the Sandcastle Collapse Model}. By using the relevant knowledge of unsaturated soil mechanics and geometry, we derived the attraction of suspended sand castles and its gravity, both changing over time. And it can be found that regular quadrangular pyramid the sand castle with a regular quadrangular pyramid survives the longest compared with cube, cylinder, cone and regular triangular pyramid. \textbf{Secondly}, we study the theory of structural mechanics of sand, and we consider various factors that affect the stability of the sand castle. As a result of above, we find that sand pile repose angle is an important mechanical characteristic to characterize sand pile stability, whose main influencing factor is the water content of the sand pile. Thus, using the fitting method with correction coefficients to study the relationship between the repose angle of sandy piles and water content,  we establish \textbf{the Optimal Water-Sand Ratio Model} so as to find the best water-sand ratio to maintain sandcastle stability. \textbf{Thirdly},on the basis of \textbf{the Sandcastle Collapse Model}, we consider the effect of the gravity of the infiltrated rainwater on the stability of the sandcastle during the rainfall. Since that infiltration cannot penetrate the entire sandcastle uniformly, it is believed that rainwater infiltration has no effect on the water-sand ratio of the sandcastle. And considering the rainfall infiltration amount becomes very small when the rainfall intensity is less than the infiltration intensity, so we only study the rainwater infiltration process when the rainfall intensity is greater than the infiltration intensity. Based on this limitation, we establish \textbf{the Rainwater Infiltration Model}. In this model, we combined the empirical formula proposed by Horton et al. To calculate the weight of the sandcastle suspended by the infiltration rainwater.
+\textbf{First},generally, the impact of a single wave on a sand castle is not so strong, so we believe that after each impact on a sand castle, only a portion of the sand at the bottom of the sand castle will be taken away. This will cause a portion of the sand castle above the reduced sand to be suspended.Over time, if the gravity of this part of the sand castle is greater than the attraction from the whole sand castle, then we think that the sand castle has collapsed at this time.In order to determine the relationship between the gravity of the suspended sand castle and the attraction it receives over time and the time required for the gravity of the suspended parts of the sand castle of several basic shapes to exceed the attraction, we establish \textbf{the Sandcastle Collapse Model}. By using the relevant knowledge of unsaturated soil mechanics and geometry, we derived the attraction of suspended sand castles and its gravity, both changing over time. And it can be found that regular quadrangular pyramid the sand castle with a regular quadrangular pyramid survives the longest compared with cube, cylinder, cone and regular triangular pyramid. \textbf{Secondly}, we study the theory of structural mechanics of sand, and we consider various factors that affect the stability of the sand castle. As a result of above, we find that sand pile repose angle is an important mechanical characteristic to characterize sand pile stability, whose main influencing factor is the water content of the sand pile. Thus, using the fitting method with correction coefficients to study the relationship between the repose angle of sandy piles and water content,  we establish \textbf{the Optimal Water-Sand Ratio Model} so as to find the best water-sand ratio to maintain sandcastle stability. \textbf{Thirdly},on the basis of \textbf{the Sandcastle Collapse Model}, we consider the effect of the gravity of the infiltrated rainwater on the stability of the sandcastle during the rainfall. Since that infiltration cannot penetrate the entire sandcastle uniformly, it is believed that rainwater infiltration has no effect on the water-sand ratio of the sandcastle. And considering the rainfall infiltration amount becomes very small when the rainfall intensity is less than the infiltration intensity, so we only study the rainwater infiltration process when the rainfall intensity is greater than the infiltration intensity. Based on this limitation, we establish \textbf{the Rainwater Infiltration Model}. In this model, we combined the empirical formula proposed by Horton et al. \cite{1} To calculate the weight of the sandcastle suspended by the infiltration rainwater.
 And the results show that the cube survives the longest of these few geometries. \textbf{In addition}, as for other strategies to extend the life of sandcastles, i will consider applyling sand-fixing glue on the surface of the sand castle, or building a transparent shelter around the sand sculpture.
 
-What's more, in the sensitivity analysis, we focus on three factors, namely the height of sandcastle, the height of the tide that hits the sandcastle and the depth of the tide-eroded sandcastle,in order to analyze their impacts on the sandcastle stability. \textbf{Finally}, we write an article describing your model and its results for publication in the vacation magazine: Fun in the Sun to sharing our idea with the readers. Besides, our model can be used not only to study the extension of the life of sand castles, but also to play a role in the research of mudslide landslides, sand sculpture manufacturing technology, design of suspended structures in buildings.
+What's more, in the sensitivity analysis, we focus on three factors, namely the height of sandcastle, the height of the tide that hits the sandcastle and the depth of the tide-eroded sandcastle,in order to analyze their impacts on the sandcastle stability. \textbf{Finally}, we write an article describing your model and its results for publication in the vacation magazine: Fun in the Sun to sharing our ideas with the readers. Besides, our model can be used not only to study the extension of the life of sand castles, but also to play a role in the research of mudslide landslides, sand sculpture manufacturing technology, design of suspended structures in buildings.
 \\
 \\
-\large{\textbf{Keywords}:Suspended Sand Castle; Gravity and attraction; The Optimal Water-Sand Ratio; Repose Angle; infiltrated rainwater; Wave Intensity}
+\textbf{Keywords}:Suspended Sand Castle; Gravity and attraction; The Optimal Water-Sand Ratio; Repose Angle; infiltrated rainwater; Wave Intensity
 % to here
 %%%%%%%%%%% End Summary %%%%%%%%%%%
 
@@ -68,13 +70,78 @@ What's more, in the sensitivity analysis, we focus on three factors, namely the 
 \clearpage
 \pagestyle{fancy}
 % Uncomment the next line to generate a Table of Contents
-%\tableofcontents 
+\tableofcontents 
 \newpage
 \setcounter{page}{1}
 \rhead{Page \thepage\ }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Begin your paper here
+\section{Introduction}
+\subsection{Problem Restatement}
+Sandcastle, the crystallization of the imagination and wisdom of beach entertainers.You can always see people on the beach building sand castles of different sizes and shapes according to their own ideas.But somehow, some people's sand castles are always extremely fragile, while others are as solid as gold. Does this inevitably inspire us to think? : How can we build a reliable sand castle? As far as i am concerned, we need to build build mathematical models to solve the following problems:
+\begin{enumerate}
+	\item Determine the relationship between the function of this condition with the times of seawater shocks and the shape of the sandcastle.
+	\item Find a feature that can represent the stability of a sand castle, and study the relationship between this feature and the water-sand ratio of the sand castle.
+	\item Investigate what significant impact rainfall has on the stability of sandcastles and study the relationship between the function of this effect over time and the shape of the sandcastle.
+\end{enumerate}
+\section{Assumptions and Justifications}
+We make some general assumptions to simplify our model. These assumptions together
+with corresponding justification are listed below:
+\begin{enumerate}
+	\item Assume that the impact of seawater on sandcastles only changes the bottom of sandcastle foundations, while the upper part of the bottom of sandcastle foundations does not change, and the shape of the bottom of sandcastle foundations changes regularly.
+	According to the tide table, the intensity of the waves is basically unchanged in each time period of the day. Controlling the appropriate water castle distance can make the impact of the tide on the sand castle as weak as possible, so it can be considered that each flush only affects the bottom of the sand castle. And it can be considered that this small change caused by each wave wash to the bottom of the sand castle is regular.
+	\item  Assume that the rainfall intensity of our model is greater than the infiltration intensity. Under this assumption, our sandcastle model meets the applicable conditions of the Holden infiltration formula. The infiltration rate can be calculated using the Holden infiltration formula \cite{1}. During rainfall, the rate of infiltration increased from fast to slow and gradually flattened. When the rainfall intensity is less than the infiltration intensity, the infiltration of the rainwater becomes very small, and its gravity has little effect on the stability of the sand castle. Therefore, this paper only considers the influence of the gravity of the rainwater infiltrated into the sandcastle on the stability of the sandcastle when the rainfall intensity is greater than the infiltration intensity.
+	\item Assume that rainwater infiltration will not change the water-sand ratio of the sandcastle. Considering that the research object is a small sandcastle, the surface area of which is small, and the infiltration effect decreases with time, so the amount of rainwater infiltration is small, which is not enough to have a significant impact on the water and sediment ratio of the sandcastle.
+\end{enumerate}
+\section{Notations}
+For convenience,we use the following symbols in our models,cf.Table \ref{tab1}.
+\begin{table}[H]
+	\begin{tabular}{cl}
+		\hline
+		Symbols&Description\\
+		\hline
+		$Ts$&Surface Tension\\
+		$r'$&Sand radius\\
+		$mA$&Solvent quality\\
+		$mB$&Solute mass\\
+		$MB$&Molar mass of solute\\
+		$s$&Number of ions that can be decomposed by the solute \\
+		$R$&Generalized gas constant\\
+		$T$&Absolute temperature\\
+		$g$&Gravitational acceleration\\
+		$Rs$&Curvature radius\\
+		$U$&Pressure difference\\
+		$c$&Solute mass molar concentration\\
+		$Ф$&Osmotic suction coefficient\\
+		$Fs$&Solution osmotic suction\\
+		$n$&The number of waves hit \\
+		$d$&Tide washout depth\\
+		$h1$&Wave height\\
+		$h2$&Height of geometry \\
+		$Vd$&Volume of overhanging part\\
+		$v$&Geometry volume\\
+		$p$&Density of sand\\
+		$f$&Wave frequency\\
+		$pr$&Rain density\\
+		$Gs$& Gravity of infiltration rainwater increased due to rainwater infiltration in the suspended part of the sand castle  \\
+		$Gx$& Gravity in the "floating" part of the sandcastle\\
+		$Sc$&Contact area\\
+		$I$&Infiltration rate\\
+		$Fc'$&Average impact force \\
+		$Fc$&Impact of rainfall on sand castles\\
+		\hline
+	\end{tabular}
+	\caption{Symbols and its Description}
+	\label{tab1}
+\end{table}
 
+\section{Sandcastle Collapse Model}
+\subsection{Describe the physical properties of the sandcastle and its connection to the tide}
+Wet sand is a kind of unsaturated soil. The most important physical property of unsaturated soil is suction \cite{2}. The suction of wet sand is an important reason for sand to aggregate together to build a sand castle.
+
+\begin{thebibliography}{99}
+	\bibitem{1} Gorton
+	\bibitem{2}fei bao he tu
+\end{thebibliography}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
